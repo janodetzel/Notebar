@@ -10,6 +10,7 @@ import SwiftUI
 struct DropdownMenuView: NSViewRepresentable {
     
     @ObservedObject var themeManager: ThemeManager
+    @ObservedObject var fileManager: NoteFileManager
         
     func makeNSView(context: Context) -> NSPopUpButton {
         
@@ -28,6 +29,18 @@ struct DropdownMenuView: NSViewRepresentable {
 //        iconImage?.size = NSSize(width: 12, height: 12)
 //        iconItem.image = iconImage
         
+        let fileItem = NSMenuItem(title: "Select Notes File...", action: #selector(Coordinator.fileAction), keyEquivalent: "")
+        fileItem.representedObject = self.fileManager
+        fileItem.target = context.coordinator
+        
+        let fileName = fileManager.getFileName()
+        let currentFileItem = NSMenuItem(title: "Current: \(fileName)", action: nil, keyEquivalent: "")
+        currentFileItem.isEnabled = false
+        // Truncate if too long
+        if fileName.count > 30 {
+            currentFileItem.title = "Current: \(String(fileName.prefix(27)))..."
+        }
+        
         let themeItem = NSMenuItem(title: "Change theme", action: #selector(Coordinator.themeAction), keyEquivalent: "")
         themeItem.representedObject = self.themeManager
         themeItem.target = context.coordinator
@@ -36,9 +49,13 @@ struct DropdownMenuView: NSViewRepresentable {
         quitItem.target = context.coordinator
 
         nsView.menu?.insertItem(iconItem, at: 0)
-//        nsView.menu?.insertItem(themeItem, at: 1)
-//        nsView.menu?.insertItem(NSMenuItem.separator(), at: 2)
-        nsView.menu?.insertItem(quitItem, at: 1)
+        nsView.menu?.insertItem(NSMenuItem.separator(), at: 1)
+        nsView.menu?.insertItem(fileItem, at: 2)
+        nsView.menu?.insertItem(currentFileItem, at: 3)
+        nsView.menu?.insertItem(NSMenuItem.separator(), at: 4)
+        nsView.menu?.insertItem(themeItem, at: 5)
+        nsView.menu?.insertItem(NSMenuItem.separator(), at: 6)
+        nsView.menu?.insertItem(quitItem, at: 7)
 
         let cell = nsView.cell as? NSButtonCell
         cell?.imagePosition = .imageOnly
@@ -61,6 +78,12 @@ struct DropdownMenuView: NSViewRepresentable {
         @objc func themeAction(_ sender: NSMenuItem) {
             let tm = sender.representedObject as! ThemeManager
             tm.showThemeEditor()
+        }
+        @objc func fileAction(_ sender: NSMenuItem) {
+            let fm = sender.representedObject as! NoteFileManager
+            _ = fm.selectFile()
+            // Notify that file changed - this will trigger reload in TextManager
+            NotificationCenter.default.post(name: NSNotification.Name("NoteFileChanged"), object: nil)
         }
     }
 }

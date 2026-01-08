@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		C803A1EF25CF941200366CEB /* MbSwiftUIFirstResponder in Frameworks */ = {isa = PBXBuildFile; productRef = C803A1EE25CF941200366CEB /* MbSwiftUIFirstResponder */; };
+		C900000125CF941200366CEB /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = C900000025CF941200366CEB /* Markdown */; };
 		C803A1F225CF98DF00366CEB /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C803A1F125CF98DF00366CEB /* TextManager.swift */; };
 		C82C210725C60B3D00CCCDF7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82C210625C60B3D00CCCDF7 /* HeaderView.swift */; };
 		C82C210A25C60B5E00CCCDF7 /* DropdownMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82C210925C60B5E00CCCDF7 /* DropdownMenuView.swift */; };
+		C900000525CF941200366CEB /* MarkdownPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C900000625CF941200366CEB /* MarkdownPreviewView.swift */; };
 		C82C211025C62D8100CCCDF7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82C210F25C62D8100CCCDF7 /* Colors.xcassets */; };
 		C82C211625C7717E00CCCDF7 /* ThemeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82C211525C7717E00CCCDF7 /* ThemeEditorView.swift */; };
 		C82C211925C771CA00CCCDF7 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82C211825C771CA00CCCDF7 /* ThemeManager.swift */; };
+		C900000325CF941200366CEB /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C900000425CF941200366CEB /* MarkdownRenderer.swift */; };
+		C900000725CF941200366CEB /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C900000825CF941200366CEB /* FileManager.swift */; };
 		C836C55925A0171500BEB83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836C55825A0171500BEB83F /* AppDelegate.swift */; };
 		C836C55B25A0171500BEB83F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C836C55A25A0171500BEB83F /* ContentView.swift */; };
 		C836C55D25A0171600BEB83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C836C55C25A0171600BEB83F /* Assets.xcassets */; };
@@ -25,9 +29,12 @@
 		C803A1F125CF98DF00366CEB /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
 		C82C210625C60B3D00CCCDF7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C82C210925C60B5E00CCCDF7 /* DropdownMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuView.swift; sourceTree = "<group>"; };
+		C900000625CF941200366CEB /* MarkdownPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownPreviewView.swift; sourceTree = "<group>"; };
 		C82C210F25C62D8100CCCDF7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C82C211525C7717E00CCCDF7 /* ThemeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEditorView.swift; sourceTree = "<group>"; };
 		C82C211825C771CA00CCCDF7 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		C900000425CF941200366CEB /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
+		C900000825CF941200366CEB /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		C836C55525A0171500BEB83F /* Notebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C836C55825A0171500BEB83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C836C55A25A0171500BEB83F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C803A1EF25CF941200366CEB /* MbSwiftUIFirstResponder in Frameworks */,
+				C900000125CF941200366CEB /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,7 @@
 				C82C210925C60B5E00CCCDF7 /* DropdownMenuView.swift */,
 				C82C210625C60B3D00CCCDF7 /* HeaderView.swift */,
 				C82C211525C7717E00CCCDF7 /* ThemeEditorView.swift */,
+				C900000625CF941200366CEB /* MarkdownPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -83,6 +92,8 @@
 				C836C55825A0171500BEB83F /* AppDelegate.swift */,
 				C803A1F125CF98DF00366CEB /* TextManager.swift */,
 				C82C211825C771CA00CCCDF7 /* ThemeManager.swift */,
+				C900000425CF941200366CEB /* MarkdownRenderer.swift */,
+				C900000825CF941200366CEB /* FileManager.swift */,
 				C82C211225C63CA800CCCDF7 /* Views */,
 				C836C55C25A0171600BEB83F /* Assets.xcassets */,
 				C82C210F25C62D8100CCCDF7 /* Colors.xcassets */,
@@ -120,6 +131,7 @@
 			name = Notebar;
 			packageProductDependencies = (
 				C803A1EE25CF941200366CEB /* MbSwiftUIFirstResponder */,
+				C900000025CF941200366CEB /* Markdown */,
 			);
 			productName = Notebar;
 			productReference = C836C55525A0171500BEB83F /* Notebar.app */;
@@ -150,6 +162,7 @@
 			mainGroup = C836C54C25A0171500BEB83F;
 			packageReferences = (
 				C803A1ED25CF941200366CEB /* XCRemoteSwiftPackageReference "MbSwiftUIFirstResponder" */,
+				C900000225CF941200366CEB /* XCRemoteSwiftPackageReference "swift-markdown" */,
 			);
 			productRefGroup = C836C55625A0171500BEB83F /* Products */;
 			projectDirPath = "";
@@ -183,8 +196,11 @@
 				C82C210725C60B3D00CCCDF7 /* HeaderView.swift in Sources */,
 				C82C211625C7717E00CCCDF7 /* ThemeEditorView.swift in Sources */,
 				C82C210A25C60B5E00CCCDF7 /* DropdownMenuView.swift in Sources */,
+				C900000525CF941200366CEB /* MarkdownPreviewView.swift in Sources */,
 				C836C55925A0171500BEB83F /* AppDelegate.swift in Sources */,
 				C82C211925C771CA00CCCDF7 /* ThemeManager.swift in Sources */,
+				C900000325CF941200366CEB /* MarkdownRenderer.swift in Sources */,
+				C900000725CF941200366CEB /* FileManager.swift in Sources */,
 				C803A1F225CF98DF00366CEB /* TextManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +416,14 @@
 				kind = branch;
 			};
 		};
+		C900000225CF941200366CEB /* XCRemoteSwiftPackageReference "swift-markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-markdown";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -407,6 +431,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C803A1ED25CF941200366CEB /* XCRemoteSwiftPackageReference "MbSwiftUIFirstResponder" */;
 			productName = MbSwiftUIFirstResponder;
+		};
+		C900000025CF941200366CEB /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C900000225CF941200366CEB /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

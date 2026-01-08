@@ -1,16 +1,33 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "MbSwiftUIFirstResponder",
-        "repositoryURL": "https://github.com/Mobilinked/MbSwiftUIFirstResponder",
-        "state": {
-          "branch": "main",
-          "revision": "4eafce5e917742334183f9bde9ebeedbcc0b1651",
-          "version": null
-        }
+  "originHash" : "87c6fad415619d9eac6c6720f5b19b8518dea9ad166a68a51c94e44aecf43300",
+  "pins" : [
+    {
+      "identity" : "mbswiftuifirstresponder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mobilinked/MbSwiftUIFirstResponder",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4eafce5e917742334183f9bde9ebeedbcc0b1651"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark.git",
+      "state" : {
+        "revision" : "5d9bdaa4228b381639fff09403e39a04926e2dbe",
+        "version" : "0.7.1"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-markdown",
+      "state" : {
+        "revision" : "7d9a5ce307528578dfa777d505496bd5f544ad94",
+        "version" : "0.7.3"
+      }
+    }
+  ],
+  "version" : 3
 }
